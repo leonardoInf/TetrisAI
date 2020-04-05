@@ -1,12 +1,11 @@
 language: java
 
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-
 jobs:
   include:
-    stage: build
-    script: ./build
-  
+    -  stage: Build
+       install: ./dependencies
+       script: ./build
+
+#addons:
+#  apt:
+#    update: true
