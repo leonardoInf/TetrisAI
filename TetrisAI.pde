@@ -62,7 +62,9 @@ void draw() {
         player.show_game();
         player.show_next();
         if(player.dead) {
-           highscore = player.score;
+           if(player.score > highscore){
+              highscore = player.score;
+           }
            player = new Tetris(); 
         }
     } else {
