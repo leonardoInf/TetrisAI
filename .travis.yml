@@ -1,0 +1,12 @@
+language: java
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
+jobs:
+  include:
+    stage: build
+    script: ./build
+  

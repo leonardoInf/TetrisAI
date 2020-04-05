@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wget https://download.processing.org/processing-3.5.4-linux64.tgz
+tar xvzf processing-3.5.4-linux64.tgz

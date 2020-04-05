@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+import os, subprocess
+
+processing_location = os.path.join(os.environ['TRAVIS_BUILD_DIR'], 'processing-3.5.4', 'processing-java')
+build_cmd = [processing_location, '--sketch=TetrisAI', '--build']
+
+output = subprocess.check_output(build_cmd).decode('utf-8').strip()
+print(output == 'Finished.')
